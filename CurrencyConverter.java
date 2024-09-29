@@ -5,16 +5,12 @@ import java.util.*;
 public class CurrencyConverter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Define currency conversion rates
         Map<String, Double> conversionRates = new HashMap<>();
         conversionRates.put("USD", 1.0);
         conversionRates.put("EUR", 0.88);
         conversionRates.put("GBP", 0.76);
         conversionRates.put("INR", 74.83);
         conversionRates.put("AUD", 1.48);
-
-        // Main menu
         while (true) {
             System.out.println("Currency Converter");
             System.out.println("1. Convert Currency");
@@ -38,8 +34,6 @@ public class CurrencyConverter {
             }
         }
     }
-
-    // Method to convert currency
     public static void convertCurrency(Map<String, Double> conversionRates, Scanner scanner) {
         System.out.print("Enter amount: ");
         double amount = scanner.nextDouble();
@@ -51,8 +45,6 @@ public class CurrencyConverter {
         double convertedAmount = amount * (conversionRates.get(toCurrency) / conversionRates.get(fromCurrency));
         System.out.println(amount + " " + fromCurrency + " = " + convertedAmount + " " + toCurrency);
     }
-
-    // Method to view conversion rates
     public static void viewConversionRates(Map<String, Double> conversionRates) {
         System.out.println("Conversion Rates:");
         for (Map.Entry<String, Double> entry : conversionRates.entrySet()) {
