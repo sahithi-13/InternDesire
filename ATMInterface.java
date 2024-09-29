@@ -3,11 +3,7 @@ import java.util.*;
 public class ATMInterface {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Initialize account balance
         double balance = 1000.0;
-
-        // Main menu
         while (true) {
             System.out.println("ATM Interface");
             System.out.println("1. Check Balance");
